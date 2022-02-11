@@ -12,7 +12,7 @@ export const getProducts = () => async (dispatch:any) => {
       } 
     });
      console.log('test');
-    const { data } = await axios.get("");
+    const { data } = await axios.get("/home");
     console.log(data);
     dispatch({
       type: actionTypes.GET_PRODUCTS_SUCCESS,

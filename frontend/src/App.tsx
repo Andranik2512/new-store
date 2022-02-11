@@ -29,7 +29,7 @@ const [sideToggle, setSideToggle] = useState(false)
       <Backdrop show={sideToggle} click={() => setSideToggle(false)}/>
       <main>
         <Routes>
-          <Route path="/" element={<HomeScreen />} />
+          <Route path="/home" element={<HomeScreen />} />
           <Route path="/product/:id" element={<ProductScreen />} />
           <Route path="/cart" element={<CartScreen />} />
         </Routes>
