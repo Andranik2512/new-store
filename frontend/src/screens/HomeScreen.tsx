@@ -7,6 +7,7 @@ import Product from '../components/Product';
 import {getProducts as listProducts} from '../redux/actions/productActions'
 import './HomeScreen.css'
 
+
 const HomeScreen: FC= () => {
 
   const dispatch = useDispatch();

@@ -3,7 +3,11 @@ import { Link } from 'react-router-dom';
 import './Product.css'
 
 interface Productprops{
-  imageUrl:any, description:any, price:any, name:any, productId:any;
+  imageUrl:any, 
+  description:any, 
+  price:any, 
+  name:any, 
+  productId:any;
 }
 
 

@@ -7,7 +7,7 @@ export const getProducts = () => async (dispatch:any) => {
       type: actionTypes.GET_PRODUCTS_REQUEST, 
       payload: {
         request: {
-          url: "/admin/get_all_products"
+          url: "/home"
         }
       } 
     });

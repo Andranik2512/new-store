@@ -16,7 +16,7 @@ const Navbar: FC<TNavbarPropos> = ({click}) => {
             Zappos
             </h2>
           </Link>
-        {/* <h2 >Zappos</h2> */}
+
       </div>
 
       <ul className='navbar__links'>
@@ -25,7 +25,6 @@ const Navbar: FC<TNavbarPropos> = ({click}) => {
             <i className='fas fa-shoping-cart'></i>
             <span>
                 Cart
-            {/* <span className='cartlogo__badge'>0</span> */}
             </span>
           </Link>
         </li>
