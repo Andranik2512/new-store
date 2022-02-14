@@ -10,10 +10,15 @@ interface Productprops{
   productId:number;
 }
 
-
+{/* <Link to={`/product/${productId}`}
+</Link> */}
 const Product: FC<Productprops> = ({imageUrl, description, price, name, productId}) => {
   return (
-    <div className="product">
+    
+    <Link to={`/product/${productId}`} className="product">
+      <div>
+        
+      </div>
     <img src={imageUrl} alt={name}/>
 
     <div className="product__info">
@@ -21,13 +26,13 @@ const Product: FC<Productprops> = ({imageUrl, description, price, name, productI
 
       <p className="info__description">{description.substring(0, 100)}...</p>
 
-      <p className="info__price">${price}</p>
+      <p className="info__price">$ {price}</p>
 
-      <Link to={`/product/${productId}`} className="info__button">
-        View
+      <Link to={"/cart"} className="info__button">
+      Add to cart
       </Link>
     </div>
-  </div>
+  </Link>
   )
 };
 
