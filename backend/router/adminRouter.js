@@ -32,7 +32,7 @@ routerAdmin.post('/add_prod', authMiddleware, productController.addProd);
 
 routerAdmin.get('/get_all_products', authMiddleware, sortSwitch, productController.getAll);
 
-routerAdmin.get('/get_one_prod/:id', productController.getOne);
+routerAdmin.get('/get_one_prod/:id',authMiddleware, productController.getOne);
 
 routerAdmin.delete('/delete_prod/:id', authMiddleware, productController.deleteProd);
 
