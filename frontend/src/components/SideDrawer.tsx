@@ -4,7 +4,7 @@ import './SideDrawer.css'
 
 export type TSideDrawerPropos = {
   show: boolean,
-  click: any
+  click: ()=>void
 }
 
 
