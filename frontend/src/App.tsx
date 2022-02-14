@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import HomeScreen from './screens/HomeScreen';
@@ -21,6 +21,14 @@ export const GET_PRODUCT_FAIL = "GET_PRODUCT_FAIL";
 const App: FC = () => {
 
 const [sideToggle, setSideToggle] = useState(false)
+
+useEffect(() => {
+  const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMDRlMmVmYTJkMDJiZTljOTgzODRiZCIsIm5hbWUiOiJBZG1pbiIsImlhdCI6MTY0NDY0ODY3NiwiZXhwIjoxNjQ0NzM1MDc2fQ.zqbRKQwvMPr0OyNRN64AWfSP4GWF3jBJuNsCDA0jqvA';
+  if(!localStorage.getItem('auth_token')) {
+    localStorage.setItem('auth_token', token)
+  }
+  
+}, [])
 
   return (
     <Router>
