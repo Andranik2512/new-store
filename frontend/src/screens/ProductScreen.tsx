@@ -12,10 +12,10 @@ const ProductScreen: FC = () => {
 
   const pathname = window.location.href;
   const arr = pathname.split("/");
-  const prodId = arr[arr.length-1];
+  const prodId = arr[arr.length - 1];
   console.log(prodId);
 
-  const productDetails = useSelector((state:any) => state.getProductDetails);
+  const productDetails = useSelector((state: any) => state.getProductDetails);
   const { loading, error, product } = productDetails;
 
   const dispatch = useDispatch();
@@ -59,9 +59,9 @@ const ProductScreen: FC = () => {
               </p>
               <p>
                 <button type="button" onClick={addToCartHandler}>
-                <Link to={"/cart"} className="info__button">
+                  <Link to={"/cart"} className="info__button">
                     Add to cart
-                </Link>
+                  </Link>
                 </button>
               </p>
             </div>
