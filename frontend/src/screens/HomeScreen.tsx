@@ -6,7 +6,7 @@ import Product from '../components/Product';
 
 import {getProducts as listProducts} from '../redux/actions/productActions'
 import './HomeScreen.css'
-
+import {ProductProps} from '../components/Product'
 
 const HomeScreen: FC= () => {
 
@@ -29,7 +29,7 @@ const HomeScreen: FC= () => {
           <h2>{error}</h2>
         ) : (
           console.log(products),
-          products.map((product:any) => (
+          products.map((product:ProductProps) => (
             <Product
             key={product._id}
             name={product.name}

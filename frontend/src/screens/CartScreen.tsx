@@ -4,14 +4,13 @@ import React, { FC } from 'react';
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { ProductProps } from '../components/Product'
 
 // Components
 import CartItem from "../components/CartItem";
 
 // Actions
 import { addToCart, removeFromCart } from "../redux/actions/cartActions";
-
-
 
 
 const CartScreen: FC = () => {
@@ -22,11 +21,11 @@ const CartScreen: FC = () => {
 
   useEffect(() => {}, []);
 
-  const qtyChangeHandler = (id:any) => {
+  const qtyChangeHandler = (id:number) => {
     dispatch(addToCart(id));
   };
 
-  const removeFromCartHandler = (id:any) => {
+  const removeFromCartHandler = (id:string) => {
     dispatch(removeFromCart(id));
   };
 
@@ -36,7 +35,7 @@ const CartScreen: FC = () => {
 
   const getCartSubTotal = () => {
     return cartItems
-      .reduce((price:any, item:any) => price + item.price, 0)
+      .reduce((price:number, item:ProductProps) => price + item.price, 0)
       .toFixed(2);
   };
 
@@ -51,7 +50,7 @@ const CartScreen: FC = () => {
               Your Cart Is Empty <Link to="/">Go Back</Link>
             </div>
           ) : (
-            cartItems.map((item:any) => (
+            cartItems.map((item:ProductProps) => (
                 <CartItem
                 key={item.product}
                 item={item}

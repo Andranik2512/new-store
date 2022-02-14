@@ -4,12 +4,14 @@ import './Product.css'
 import { useSelector, useDispatch } from 'react-redux';
 import { addToCart } from '../redux/actions/cartActions'
 
-interface ProductProps{
+export interface ProductProps{
   imageUrl:string, 
   description:string, 
   price:number, 
   name:string, 
-  productId:number;
+  productId?:number;
+  product?:string;
+  _id?:number;
 }
 
 
