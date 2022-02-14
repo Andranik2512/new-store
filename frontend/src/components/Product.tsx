@@ -4,7 +4,7 @@ import './Product.css'
 import { useSelector, useDispatch } from 'react-redux';
 import { addToCart } from '../redux/actions/cartActions'
 
-interface Productprops{
+interface ProductProps{
   imageUrl:string, 
   description:string, 
   price:number, 
@@ -13,7 +13,7 @@ interface Productprops{
 }
 
 
-const Product: FC<Productprops> = ({imageUrl, description, price, name, productId}) => {
+const Product: FC<ProductProps> = ({imageUrl, description, price, name, productId}) => {
   const dispatch = useDispatch();
 
   const handleClick = (e:React.MouseEvent<HTMLButtonElement> ) => {
