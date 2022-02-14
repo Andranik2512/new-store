@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useCallback } from 'react';
 import { useEffect } from 'react';
 import {useSelector, useDispatch  } from 'react-redux';
 
@@ -14,10 +14,15 @@ const HomeScreen: FC= () => {
 
   const getProducts = useSelector((state:any) => state.getProducts);
   const { products, loading, error } = getProducts;
+  
 
   useEffect(() => {
     dispatch(listProducts());
   }, [dispatch]);
+
+  useCallback(() => {
+    dispatch(listProducts());
+  }, [products])
 
   return (
     <div className="homescreen">

@@ -6,6 +6,7 @@ import axios from "axios";
 export const addToCart = (id: any) => async (dispatch: any, getState: any) => {
   const { data } = await axios.get(`/home/get_one/${id}`);
 
+
   dispatch({
     type: actionTypes.ADD_TO_CART,
     payload: {
@@ -16,7 +17,6 @@ export const addToCart = (id: any) => async (dispatch: any, getState: any) => {
       countInStock: data.countInStock,
     },
   });
-
   localStorage.setItem("cart", JSON.stringify(getState().cart.cartItems));
 };
 
