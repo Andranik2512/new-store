@@ -1,8 +1,10 @@
 import * as actionTypes from "../constans/cartConstans";
 import axios from "axios";
 
-export const addToCart = (id:any) => async (dispatch:any, getState:any) => {
-  const { data } = await axios.get(`/admin/get_one_prod/${id}`);
+
+
+export const addToCart = (id: any) => async (dispatch: any, getState: any) => {
+  const { data } = await axios.get(`/home/get_one/${id}`);
 
   dispatch({
     type: actionTypes.ADD_TO_CART,
@@ -18,7 +20,7 @@ export const addToCart = (id:any) => async (dispatch:any, getState:any) => {
   localStorage.setItem("cart", JSON.stringify(getState().cart.cartItems));
 };
 
-export const removeFromCart = (id:any) => (dispatch:any, getState:any) => {
+export const removeFromCart = (id: any) => (dispatch: any, getState: any) => {
   dispatch({
     type: actionTypes.REMOVE_FROM_CART,
     payload: id,
