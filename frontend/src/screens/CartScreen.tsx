@@ -52,7 +52,7 @@ const CartScreen: FC = () => {
             </div>
           ) : (
             cartItems.map((item:any) => (
-              <CartItem
+                <CartItem
                 key={item.product}
                 item={item}
                 removeHandler={removeFromCartHandler}

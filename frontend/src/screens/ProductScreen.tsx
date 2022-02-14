@@ -6,9 +6,12 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
+interface ProductScreenProps{
+  onClick: ()=> void;
+}
 
 
-const ProductScreen: FC = () => {
+export const ProductScreen: FC<ProductScreenProps> = ({onClick}) => {
 
   const pathname = window.location.href;
   const arr = pathname.split("/");
@@ -26,8 +29,9 @@ const ProductScreen: FC = () => {
     }
   }, [dispatch, product]);
 
-  const addToCartHandler = () => {
+ const addToCartHandler = () => {
     dispatch(addToCart(product._id));
+    
   };
   return (
     <div className="productscreen">

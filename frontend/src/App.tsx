@@ -30,7 +30,7 @@ const [sideToggle, setSideToggle] = useState(false)
       <main>
         <Routes>
           <Route path="/" element={<HomeScreen />} />
-          <Route path="/product/:id" element={<ProductScreen />} />
+          <Route path="/product/:id" element={<ProductScreen onClick={() => {}}/>} />
           <Route path="/cart" element={<CartScreen />} />
         </Routes>
       </main>

@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 import './Product.css'
+import { useSelector, useDispatch } from 'react-redux';
+import { addToCart } from '../redux/actions/cartActions'
 
 interface Productprops{
   imageUrl:string, 
@@ -10,9 +12,16 @@ interface Productprops{
   productId:number;
 }
 
-{/* <Link to={`/product/${productId}`}
-</Link> */}
+
 const Product: FC<Productprops> = ({imageUrl, description, price, name, productId}) => {
+  const dispatch = useDispatch();
+
+  const handleClick = (e:React.MouseEvent<HTMLButtonElement> ) => {
+    e.preventDefault()
+    dispatch(addToCart(productId));
+
+  }
+
   return (
     
     <Link to={`/product/${productId}`} className="product">
@@ -28,9 +37,12 @@ const Product: FC<Productprops> = ({imageUrl, description, price, name, productI
 
       <p className="info__price">$ {price}</p>
 
-      <Link to={"/cart"} className="info__button">
-      Add to cart
-      </Link>
+      <button
+        className="info__button"
+        onClick={handleClick}
+      >
+        Add to cart
+      </button>
     </div>
   </Link>
   )

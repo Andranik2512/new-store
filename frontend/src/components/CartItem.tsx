@@ -6,10 +6,9 @@ import { Link } from "react-router-dom";
 interface Productprops{
   item:any, 
   removeHandler:any, 
-  key:number
 }
 
-const CartItem: FC<Productprops> = ({item, removeHandler, key}) => {
+const CartItem: FC<Productprops> = ({item, removeHandler}) => {
   return (
     <div className="cartitem">
       <div className="cartitem__image">
