@@ -1,5 +1,6 @@
-import * as actionTypes from "../constans/cartConstans";
 import axios from "axios";
+import { CartActionTypes } from "../types/cart";
+
 
 
 
@@ -8,7 +9,7 @@ export const addToCart = (id: any) => async (dispatch: any, getState: any) => {
 
 
   dispatch({
-    type: actionTypes.ADD_TO_CART,
+    type: CartActionTypes.ADD_TO_CART,
     payload: {
       product: data._id,
       name: data.name,
@@ -22,7 +23,7 @@ export const addToCart = (id: any) => async (dispatch: any, getState: any) => {
 
 export const removeFromCart = (id: any) => (dispatch: any, getState: any) => {
   dispatch({
-    type: actionTypes.REMOVE_FROM_CART,
+    type: CartActionTypes.REMOVE_FROM_CART,
     payload: id,
   });
 
