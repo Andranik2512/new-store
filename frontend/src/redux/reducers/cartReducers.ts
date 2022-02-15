@@ -1,7 +1,4 @@
-// import { CartAction, CartActionTypes, CartState } from "../types/cart";
-
 import { CartAction, CartActionTypes, CartState } from "../types/cart";
-
 
 const CART_INITIAL_STATE: CartState = {
   cartItems: [],

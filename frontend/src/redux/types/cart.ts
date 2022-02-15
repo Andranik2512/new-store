@@ -21,4 +21,4 @@ export enum CartActionTypes{
     payload?: any[];
   }
   
-  export type CartAction =  CartAddAction | CartRemoveAction | CartResetAction
+  export type CartAction =  CartAddAction | CartRemoveAction | CartResetAction;
