@@ -8,17 +8,25 @@ export enum CartActionTypes{
     CART_RESET = "CART_RESET",// Не используется
   }
   
+type CartAddActionPayload = {
+  product: number
+  name: string
+  imageUrl: string
+  price: number
+  countInStock: number
+}
+
   interface CartAddAction{
     type: CartActionTypes.ADD_TO_CART;
-    payload: any;
+    payload: CartAddActionPayload;
   }
   interface CartRemoveAction{
     type: CartActionTypes.REMOVE_FROM_CART;
-    payload: any[];
+    payload: CartAddActionPayload[];
   }
   interface CartResetAction{
     type: CartActionTypes.CART_RESET;// Не используется
-    payload?: any[];
+    payload?: CartAddActionPayload[];
   }
   
   export type CartAction =  CartAddAction | CartRemoveAction | CartResetAction;
