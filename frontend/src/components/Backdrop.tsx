@@ -6,7 +6,6 @@ export type TBackdropPropos = {
   click: any
 }
 
-
 const Backdrop: FC<TBackdropPropos> = ({show, click}) => {
   return (
     show && <div className='backdrop' onClick={click}></div>
@@ -15,15 +14,3 @@ const Backdrop: FC<TBackdropPropos> = ({show, click}) => {
 
 export default Backdrop;
 
-
-
-
-
-
-  // if (!show) {
-  //   return null
-  // }
-
-  // return <div className='backdrop'>
-
-  // </div>

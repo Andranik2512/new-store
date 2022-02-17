@@ -3,21 +3,15 @@ import React, { FC } from 'react';
 import { ProductProps } from '../components/Product'
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-
 import { Link } from "react-router-dom";
-import axios from "axios";
 import  {addToCart} from '../redux/actions/cartActions'
-
 
 interface CartProductprops{
   item:ProductProps, 
   removeHandler: (product: string)=>void, 
 }
-// export const addToCart = (id: any) => async (dispatch: any, getState: any) => {
-//   const { data } = await axios.get(`/home/get_one/${id}`);
 
 const CartItem: FC<CartProductprops> = ({item, removeHandler}) => {
-  // console.log(item);
   console.log(typeof item.product === 'string');
   const dispatch = useDispatch();
 

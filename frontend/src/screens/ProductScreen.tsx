@@ -3,7 +3,7 @@ import './ProductScreen.css'
 import { getProductDetails } from '../redux/actions/productActions';
 import { addToCart } from '../redux/actions/cartActions';
 import { useSelector, useDispatch } from 'react-redux';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 interface ProductScreenProps{
@@ -19,6 +19,8 @@ export const ProductScreen: FC<ProductScreenProps> = ({onClick}) => {
   console.log(prodId);
 
   const productDetails = useSelector((state: any) => state.getProductDetails);
+  // console.log(getProductDetails);
+  
   const { loading, error, product } = productDetails;
 
   const dispatch = useDispatch();

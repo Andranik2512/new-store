@@ -5,7 +5,7 @@ export interface CartState {
 export enum CartActionTypes{
     ADD_TO_CART = "ADD-TO_CART",
     REMOVE_FROM_CART = "REMOVE_FROM_CART",
-    CART_RESET = "CART_RESET",
+    CART_RESET = "CART_RESET",// Не используется
   }
   
   interface CartAddAction{
@@ -17,7 +17,7 @@ export enum CartActionTypes{
     payload: any[];
   }
   interface CartResetAction{
-    type: CartActionTypes.CART_RESET;
+    type: CartActionTypes.CART_RESET;// Не используется
     payload?: any[];
   }
   
