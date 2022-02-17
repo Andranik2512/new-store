@@ -20,7 +20,7 @@ export const GET_PRODUCT_FAIL = "GET_PRODUCT_FAIL";
 
 const App: FC = () => {
 
-const [sideToggle, setSideToggle] = useState(false)
+const [sideToggle, setSideToggle] = useState<boolean>(false)
 
 useEffect(() => {
   const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMDRlMmVmYTJkMDJiZTljOTgzODRiZCIsIm5hbWUiOiJBZG1pbiIsImlhdCI6MTY0NDY0ODY3NiwiZXhwIjoxNjQ0NzM1MDc2fQ.zqbRKQwvMPr0OyNRN64AWfSP4GWF3jBJuNsCDA0jqvA';

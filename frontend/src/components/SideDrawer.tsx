@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './SideDrawer.css'
 
 export type TSideDrawerPropos = {
-  show: boolean,
+  show: boolean 
   click: ()=>void
 }
 

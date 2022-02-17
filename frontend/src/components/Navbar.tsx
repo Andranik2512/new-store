@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import './Navbar.css';
 
 export type TNavbarPropos = {
-  click: any
+  click: ()=>void
 }
 
 const Navbar: FC<TNavbarPropos> = ({ click }) => {

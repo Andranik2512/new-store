@@ -3,7 +3,7 @@ import './Backdrop.css'
 
 export type TBackdropPropos = {
   show: boolean | any,
-  click: any
+  click: ()=>void
 }
 
 const Backdrop: FC<TBackdropPropos> = ({show, click}) => {
