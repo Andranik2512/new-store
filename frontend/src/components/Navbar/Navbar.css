@@ -97,6 +97,18 @@
     height: 3px;
     background: #f4f4f4;
   }
+
+.searchForm input{
+  /* border: 2px solid rgb(255, 255, 255); */
+  padding: 10px;
+  font-size: 12px;
+}
+
+.searchForm button{
+  background-color: rgb(255, 255, 255);
+  padding: 11px;
+  color: rgb(0, 0, 0);
+}
   
   @media (max-width: 960px) {
     .navbar__links {

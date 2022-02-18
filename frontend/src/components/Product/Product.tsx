@@ -2,7 +2,8 @@ import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 import './Product.css'
 import { useDispatch } from 'react-redux';
-import { addToCart } from '../redux/actions/cartActions'
+import { addToCart } from '../../redux/actions/cartActions';
+
 
 export interface ProductProps{
   imageUrl:string, 

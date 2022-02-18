@@ -2,11 +2,11 @@ import React, { FC, useCallback } from 'react';
 import { useEffect } from 'react';
 import {useSelector, useDispatch  } from 'react-redux';
 
-import Product from '../components/Product';
+import Product from '../components/Product/Product';
 
 import {getProducts as listProducts} from '../redux/actions/productActions'
 import './HomeScreen.css'
-import {ProductProps} from '../components/Product'
+import {ProductProps} from '../components/Product/Product'
 
 const HomeScreen: FC= () => {
 

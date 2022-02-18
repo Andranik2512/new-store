@@ -4,11 +4,11 @@ import React, { FC, useCallback } from 'react';
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { ProductProps } from '../components/Product'
+import { ProductProps } from '../components/Product/Product'
 import {getProducts as listProducts } from './../redux/actions/productActions'
 
 // Components
-import CartItem from "../components/CartItem";
+import CartItem from "../components/CartItem/CartItem";
 
 // Actions
 import { addToCart, removeFromCart } from "../redux/actions/cartActions";
