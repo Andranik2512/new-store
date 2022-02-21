@@ -1,7 +1,5 @@
-import "./CartScreen.css";
 import React, { FC, useCallback } from 'react';
 
-import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { ProductProps } from '../components/Product/Product'
@@ -13,6 +11,8 @@ import CartItem from "../components/CartItem/CartItem";
 // Actions
 import { addToCart, removeFromCart } from "../redux/actions/cartActions";
 
+import "./CartScreen.css";
+
 
 const CartScreen: FC = () => {
   const dispatch = useDispatch();
@@ -23,13 +23,6 @@ const CartScreen: FC = () => {
   useCallback(() => {
     dispatch(listProducts());
   }, [cartItems])
-
-
-  useEffect(() => {}, []);
-
-  const qtyChangeHandler = (id:number) => {
-    dispatch(addToCart(id));
-  };
 
   const removeFromCartHandler = (id:string) => {
     dispatch(removeFromCart(id));

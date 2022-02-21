@@ -4,12 +4,13 @@
   }
   
   .homescreen__title {
-    font-size: 1.5rem;
-    color: #171717;
-    margin-bottom: 1rem;
-    margin-left: 8px;
+    font-weight: bold;
+}
+  .ff{
+    display: flex;
+    justify-content: center;
+    
   }
-  
   .homescreen__products {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

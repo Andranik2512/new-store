@@ -38,7 +38,7 @@ class productController{
                 finnedDevices = await modelProduct.find({types, tags}).sort({price: sort}).limit(limit).skip(offset)
             }
             
-            return res.json({finnedDevices, countPage});
+            return res.json({finnedDevices, countPage, page});
 
         } catch (error) {
             return res.status(500).json({message: `something wrong ${error}`});
